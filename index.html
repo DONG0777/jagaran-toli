@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>জাগরণ টলি ম্যানেজমেন্ট</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f0f2f5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .app-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: white;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: white;
+        }
+        /* মোবাইলে অ্যাডজাস্টমেন্ট */
+        @media (max-width: 600px) {
+            .app-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <iframe 
+            src="https://script.google.com/macros/s/AKfycby_qwGUqD3ZarosMoGkyJtdfWGRfWjYEj4_gKSMX8qsTBS13MoZoqDVXrFBCtiEC-rOCg/exec"
+            allowfullscreen
+            loading="lazy">
+        </iframe>
+    </div>
+</body>
+</html>
