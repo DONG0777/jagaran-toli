@@ -3,34 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>মাই পার্সোনাল AI অ্যাসিস্ট্যান্ট</title>
+    <title>রিয়েল পার্সোনাল অ্যাসিস্ট্যান্ট</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🧠 আমার পার্সোনাল AI</h1>
-            <p>আপনার ব্যক্তিগত সচিব – যে ভাবে সাজেশন দেয়</p>
+            <div class="status-indicator">
+                <span class="online-dot"></span>
+                <span class="status-text">অনলাইন ∙ সক্রিয়</span>
+            </div>
+            <h1>🧠 আমার PA <span class="agent-name">(নাম দিন)</span></h1>
+            <p class="subhead">আপনার ব্যক্তিগত সচিব – যিনি আপনাকে বোঝেন</p>
         </div>
 
         <div class="chat-area" id="chatArea">
-            <div class="message bot-message">
-                👋 নমস্কার, আমি আপনার পার্সোনাল অ্যাসিস্ট্যান্ট। <br>
-                আজ আপনার দিন কেমন কাটবে বলুন, আমি প্ল্যান করে দেব। <br>
-                অথবা যেকোনো প্রশ্ন করুন।
+            <div class="message bot-message welcome-msg">
+                <div class="avatar">🤵</div>
+                <div class="msg-content">
+                    👋 নমস্কার, আমি আপনার পার্সোনাল অ্যাসিস্ট্যান্ট।<br><br>
+                    আমি আপনার সাথে তর্ক করতে পারি, সাজেশন দিতে পারি, আপনার কথার প্রসঙ্গ মনে রাখি।<br>
+                    শুধু খুলে বলুন – আপনি কী চান?<br><br>
+                    <span class="hint">▶ "আজ আমার খুব টেনশন হচ্ছে"<br>▶ "একটা বড় সিদ্ধান্ত নিতে হবে"<br>▶ "আমার ক্যারিয়ার নিয়ে ভাবছি"</span>
+                </div>
             </div>
         </div>
 
         <div class="input-area">
-            <input type="text" id="userInput" placeholder="আপনি কি করতে চান বলুন... যেমন: 'আজকে আমার ৩টা মিটিং আছে, প্ল্যান করে দাও'">
-            <button id="sendBtn">পাঠান</button>
-            <button id="voiceBtn" title="ভয়েস কমান্ড">🎤</button>
+            <input type="text" id="userInput" placeholder="আপনার কথা বলুন... আমি শুনছি">
+            <button id="sendBtn">➤ পাঠান</button>
+            <button id="voiceBtn" title="ভয়েস কমান্ড (Beta)">🎤</button>
         </div>
 
-        <div class="quick-actions">
-            <button class="quick" data-msg="আজকের জন্য একটা ডেলি প্ল্যান তৈরি করে দাও">📅 ডেইলি প্ল্যান</button>
-            <button class="quick" data-msg="আমাকে সাজেশন দাও কীভাবে আজ আরও প্রোডাক্টিভ থাকব">🎯 প্রোডাক্টিভিটি টিপস</button>
-            <button class="quick" data-msg="আমার মনে রাখার মতো কিছু নোট দরকার">📝 নোট করো</button>
+        <div class="suggestion-chips" id="suggestionChips">
+            <button class="chip" data-msg="আজ কীভাবে কাটবে?">🌅 আজ কেমন যাবে?</button>
+            <button class="chip" data-msg="আমার একটা সমস্যা বলি">🤔 সমস্যা শেয়ার করি</button>
+            <button class="chip" data-msg="আমার জন্য সিদ্ধান্ত নিতে সাহায্য করো">⚖️ সিদ্ধান্ত নিতে সাহায্য</button>
+            <button class="chip" data-msg="আমার আজকের রুটিন তৈরি করো">📋 রুটিন বানাও</button>
+        </div>
+        
+        <div class="memory-badge" id="memoryBadge">
+            📌 আমি আপনার <span id="memoryCount">0</span> টি কথা মনে রেখেছি
         </div>
     </div>
 
