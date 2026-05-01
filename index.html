@@ -1,46 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>জাগরণ টলি ম্যানেজমেন্ট</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #f0f2f5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .app-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            background: white;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            background: white;
-        }
-        /* মোবাইলে অ্যাডজাস্টমেন্ট */
-        @media (max-width: 600px) {
-            .app-container {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>মাই পার্সোনাল AI অ্যাসিস্ট্যান্ট</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
-        <iframe 
-            src="https://script.google.com/macros/s/AKfycby_qwGUqD3ZarosMoGkyJtdfWGRfWjYEj4_gKSMX8qsTBS13MoZoqDVXrFBCtiEC-rOCg/exec"
-            allowfullscreen
-            loading="lazy">
-        </iframe>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 আমার পার্সোনাল AI</h1>
+            <p>আপনার ব্যক্তিগত সচিব – যে ভাবে সাজেশন দেয়</p>
+        </div>
+
+        <div class="chat-area" id="chatArea">
+            <div class="message bot-message">
+                👋 নমস্কার, আমি আপনার পার্সোনাল অ্যাসিস্ট্যান্ট। <br>
+                আজ আপনার দিন কেমন কাটবে বলুন, আমি প্ল্যান করে দেব। <br>
+                অথবা যেকোনো প্রশ্ন করুন।
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="আপনি কি করতে চান বলুন... যেমন: 'আজকে আমার ৩টা মিটিং আছে, প্ল্যান করে দাও'">
+            <button id="sendBtn">পাঠান</button>
+            <button id="voiceBtn" title="ভয়েস কমান্ড">🎤</button>
+        </div>
+
+        <div class="quick-actions">
+            <button class="quick" data-msg="আজকের জন্য একটা ডেলি প্ল্যান তৈরি করে দাও">📅 ডেইলি প্ল্যান</button>
+            <button class="quick" data-msg="আমাকে সাজেশন দাও কীভাবে আজ আরও প্রোডাক্টিভ থাকব">🎯 প্রোডাক্টিভিটি টিপস</button>
+            <button class="quick" data-msg="আমার মনে রাখার মতো কিছু নোট দরকার">📝 নোট করো</button>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
